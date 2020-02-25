@@ -43,7 +43,6 @@
 		39DB0BE92133CF08001E4DDA /* scaningbgimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DB0BCE2133CF08001E4DDA /* scaningbgimage@2x.png */; };
 		39DB0BEA2133CF08001E4DDA /* scaningbgimage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DB0BCF2133CF08001E4DDA /* scaningbgimage@3x.png */; };
 		39DB0BEB2133CF08001E4DDA /* scaningline.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DB0BD02133CF08001E4DDA /* scaningline.png */; };
-		39DB0BEC2133CF08001E4DDA /* JYBD_IDCardRecognition.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 39DB0BD12133CF08001E4DDA /* JYBD_IDCardRecognition.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,7 +105,6 @@
 		39DB0BCE2133CF08001E4DDA /* scaningbgimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scaningbgimage@2x.png"; sourceTree = "<group>"; };
 		39DB0BCF2133CF08001E4DDA /* scaningbgimage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scaningbgimage@3x.png"; sourceTree = "<group>"; };
 		39DB0BD02133CF08001E4DDA /* scaningline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scaningline.png; sourceTree = "<group>"; };
-		39DB0BD12133CF08001E4DDA /* JYBD_IDCardRecognition.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JYBD_IDCardRecognition.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +166,6 @@
 				39DB0B9B2133CF08001E4DDA /* Classes */,
 				39DB0BC42133CF08001E4DDA /* dicts */,
 				39DB0BC62133CF08001E4DDA /* Resources */,
-				39DB0BD12133CF08001E4DDA /* JYBD_IDCardRecognition.podspec */,
 			);
 			path = JYBD_IDCardRecognition;
 			sourceTree = "<group>";
@@ -192,9 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				39DB0B9D2133CF08001E4DDA /* UIAlertController+IDCardExtend.h */,
-				39DB0B9E2133CF08001E4DDA /* UIImage+IDCardExtend.m */,
 				39DB0B9F2133CF08001E4DDA /* UIAlertController+IDCardExtend.m */,
 				39DB0BA02133CF08001E4DDA /* UIImage+IDCardExtend.h */,
+				39DB0B9E2133CF08001E4DDA /* UIImage+IDCardExtend.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -202,12 +199,12 @@
 		39DB0BA12133CF08001E4DDA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				39DB0BA22133CF08001E4DDA /* JYBDIDCardVC.h */,
-				39DB0BA32133CF08001E4DDA /* JYBDScanCardBaseVC.m */,
 				39DB0BA42133CF08001E4DDA /* JYBDBankCardVC.h */,
-				39DB0BA52133CF08001E4DDA /* JYBDIDCardVC.m */,
 				39DB0BA62133CF08001E4DDA /* JYBDBankCardVC.m */,
+				39DB0BA22133CF08001E4DDA /* JYBDIDCardVC.h */,
+				39DB0BA52133CF08001E4DDA /* JYBDIDCardVC.m */,
 				39DB0BA72133CF08001E4DDA /* JYBDScanCardBaseVC.h */,
+				39DB0BA32133CF08001E4DDA /* JYBDScanCardBaseVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,12 +212,12 @@
 		39DB0BA82133CF08001E4DDA /* JYBD_OCR_Bank */ = {
 			isa = PBXGroup;
 			children = (
-				39DB0BA92133CF08001E4DDA /* JYBDScanCardManageBase.h */,
-				39DB0BAA2133CF08001E4DDA /* JYBDScanCardManage.m */,
-				39DB0BAB2133CF08001E4DDA /* JYBDBankCardSearch.m */,
-				39DB0BAC2133CF08001E4DDA /* JYBDScanCardManageBase.m */,
 				39DB0BAD2133CF08001E4DDA /* JYBDBankCardSearch.h */,
+				39DB0BAB2133CF08001E4DDA /* JYBDBankCardSearch.m */,
 				39DB0BAE2133CF08001E4DDA /* JYBDScanCardManage.h */,
+				39DB0BAA2133CF08001E4DDA /* JYBDScanCardManage.m */,
+				39DB0BA92133CF08001E4DDA /* JYBDScanCardManageBase.h */,
+				39DB0BAC2133CF08001E4DDA /* JYBDScanCardManageBase.m */,
 			);
 			path = JYBD_OCR_Bank;
 			sourceTree = "<group>";
@@ -240,10 +237,10 @@
 		39DB0BB52133CF08001E4DDA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				39DB0BB62133CF08001E4DDA /* JYBDBankCardInfo.m */,
-				39DB0BB72133CF08001E4DDA /* JYBDCardIDInfo.m */,
 				39DB0BB82133CF08001E4DDA /* JYBDBankCardInfo.h */,
+				39DB0BB62133CF08001E4DDA /* JYBDBankCardInfo.m */,
 				39DB0BB92133CF08001E4DDA /* JYBDCardIDInfo.h */,
+				39DB0BB72133CF08001E4DDA /* JYBDCardIDInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,8 +248,8 @@
 		39DB0BBA2133CF08001E4DDA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				39DB0BBB2133CF08001E4DDA /* JYBDNewFormeScaningV.m */,
 				39DB0BBC2133CF08001E4DDA /* JYBDNewFormeScaningV.h */,
+				39DB0BBB2133CF08001E4DDA /* JYBDNewFormeScaningV.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,8 +267,8 @@
 		39DB0BC12133CF08001E4DDA /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				39DB0BC22133CF08001E4DDA /* IDCardRectManager.m */,
 				39DB0BC32133CF08001E4DDA /* IDCardRectManager.h */,
+				39DB0BC22133CF08001E4DDA /* IDCardRectManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -287,16 +284,16 @@
 		39DB0BC62133CF08001E4DDA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				39DB0BC72133CF08001E4DDA /* scaningline@2x.png */,
-				39DB0BC82133CF08001E4DDA /* scaningline@3x.png */,
-				39DB0BC92133CF08001E4DDA /* idcard_back.png */,
-				39DB0BCA2133CF08001E4DDA /* flashlightscan@3x.png */,
-				39DB0BCB2133CF08001E4DDA /* flashlightscan@2x.png */,
 				39DB0BCC2133CF08001E4DDA /* flashlightscan.png */,
+				39DB0BCB2133CF08001E4DDA /* flashlightscan@2x.png */,
+				39DB0BCA2133CF08001E4DDA /* flashlightscan@3x.png */,
+				39DB0BC92133CF08001E4DDA /* idcard_back.png */,
 				39DB0BCD2133CF08001E4DDA /* scaningbgimage.png */,
 				39DB0BCE2133CF08001E4DDA /* scaningbgimage@2x.png */,
 				39DB0BCF2133CF08001E4DDA /* scaningbgimage@3x.png */,
 				39DB0BD02133CF08001E4DDA /* scaningline.png */,
+				39DB0BC72133CF08001E4DDA /* scaningline@2x.png */,
+				39DB0BC82133CF08001E4DDA /* scaningline@3x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -368,7 +365,6 @@
 				3905650A20E2296F00B6130E /* Assets.xcassets in Resources */,
 				39DB0BE12133CF08001E4DDA /* zocr0.lib in Resources */,
 				39DB0BE52133CF08001E4DDA /* flashlightscan@3x.png in Resources */,
-				39DB0BEC2133CF08001E4DDA /* JYBD_IDCardRecognition.podspec in Resources */,
 				39DB0BE82133CF08001E4DDA /* scaningbgimage.png in Resources */,
 				3905650520E2296D00B6130E /* Main.storyboard in Resources */,
 				39DB0BE32133CF08001E4DDA /* scaningline@3x.png in Resources */,

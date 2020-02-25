@@ -9,13 +9,15 @@
 #import "JYBDScanCardManage.h"
 #import "IDCardRectManager.h"
 #import "UIImage+IDCardExtend.h"
-#import "exbankcard.h"
-#import "excards.h"
-#import "commondef.h"
 #import "exbankcardcore.h"
 #import "JYBDBankCardSearch.h"
 #import "JYBDBankCardInfo.h"
 #import "JYBDCardIDInfo.h"
+#import "exbankcardcore.h"
+#import "commondef.h"
+#import "exbankcard.h"
+#import "excards.h"
+
 @interface JYBDScanCardManage ()
 
 @end
@@ -142,6 +144,9 @@
 #pragma mark--扫描身份证--
 - (void)parseIDScanImageBuffer:(CVImageBufferRef)imageBuffer
 {
+    #if TARGET_IPHONE_SIMULATOR
+    
+    #else
     size_t width_t= CVPixelBufferGetWidth(imageBuffer);
     size_t height_t = CVPixelBufferGetHeight(imageBuffer);
     CVPlanarPixelBufferInfo_YCbCrBiPlanar *planar = CVPixelBufferGetBaseAddress(imageBuffer);
@@ -224,10 +229,15 @@
     
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
     self.isInProcessing = NO;
+    #endif
+    
 }
 
 #pragma mark--扫描银行卡--
 - (void)parseBankImageBuffer:(CVImageBufferRef)imageBuffer {
+    #if TARGET_IPHONE_SIMULATOR
+    
+    #else
     size_t width_t= CVPixelBufferGetWidth(imageBuffer);
     size_t height_t = CVPixelBufferGetHeight(imageBuffer);
     CVPlanarPixelBufferInfo_YCbCrBiPlanar *planar = CVPixelBufferGetBaseAddress(imageBuffer);
@@ -285,6 +295,8 @@
     }
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
     self.isInProcessing = NO;
+    #endif
+   
 }
 
 //选择前置和后置
@@ -468,12 +480,17 @@ static const NSString *THCameraAdjustingExposureContext;
 static bool initFlag = NO;
 - (void)configIDScan {
     if (!initFlag) {
+        #if TARGET_IPHONE_SIMULATOR
+        #else
         const char *thePath = [[[NSBundle mainBundle] resourcePath] UTF8String];
         int ret = EXCARDS_Init(thePath);
-        if (ret != 0) {
-            NSLog(@"初始化失败：ret=%d", ret);
-        }
-        initFlag = YES;
+         if (ret != 0) {
+             NSLog(@"初始化失败：ret=%d", ret);
+         }
+         initFlag = YES;
+        #endif
+        
+        
     }
 }
 
